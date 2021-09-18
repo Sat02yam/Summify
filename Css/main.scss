@@ -1,0 +1,182 @@
+@import './Assets';
+
+body{
+    font-family: 'Poppins';
+    background: $bg;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px 0 50px;
+
+    .logo{
+        h1{
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 48px;
+        }
+    }
+    .touch{
+        width: 180px;
+        height: 44px;
+        background: $button;
+        border-radius: 12px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+        h3 a{
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+
+.sone{
+    margin-top: 64px;
+    height: 90vh;
+    
+    .hero{
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            li{
+                text-decoration: none;
+                list-style: none;
+                h1{
+                    font-size: 48px;
+                    color: $text;
+                }
+                h4{
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-align: center;
+                    width: 32vw;
+                    color: $text;
+                }
+            }
+        }
+    }
+
+    .textin{
+        margin-top: 40px;
+        .inputBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            #inputText{
+                border: none;
+                resize: none;
+                border-radius: 16px;
+                padding: 10px;
+                width: 80vw;
+                height: 40vh;
+                background: $textbox;
+                outline: none;
+                color: $text;
+            }
+
+            button{
+                background: $button;
+                color: white;
+                padding: 10px 40px;
+                width: 140px;
+                height: 40px;
+                font-family: 'Poppins';
+                font-weight: 600;
+                outline: none;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                margin-top: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                @include Shadow();
+            }
+        }
+    }
+}
+
+.stwo{
+    width: 100%;
+    margin-top: 64px;
+    height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+
+    h1{
+        margin-top: 50px;
+        font-size: 32px;
+        color: $text;
+    }
+
+    .outputBox{
+        margin-top: 50px;
+        #outputText{
+            border: none;
+            resize: none;
+            border-radius: 16px;
+            padding: 10px;
+            width: 80vw;
+            height: 40vh;
+            background: $textbox;
+            outline: none;
+            color: $text;
+        }
+    }
+
+    .btn{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100vh;
+
+        button{
+            background: $button;
+            color: white;
+            padding: 10px 40px;
+            width: 180px;
+            height: 50px;
+            font-family: 'Poppins';
+            font-weight: 600;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+                
+            @include Shadow();
+        }
+    }
+}
