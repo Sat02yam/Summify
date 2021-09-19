@@ -8,16 +8,34 @@ function inp() {
 
   //   var input = `${inputText.value}`;
   // console.log(input);
-  function summ() {
-    var input = inp();
-    Algorithmia.client('sim6fYfoZ7t75cTwEvyAJG73WcK1')
-      .algo('nlp/Summarizer/0.1.8?timeout=300') // timeout is optional
-      .pipe(input)
-      .then(function (output) {
-        console.log(output);
-        outputText.innerText = output.result;
-      });
-  }
+document.getElementById('sumBtn').addEventListener('click',()=>{
+  console.log("clicked")
+  var input = inp();
+  Algorithmia.client('sim6fYfoZ7t75cTwEvyAJG73WcK1')
+    .algo('nlp/Summarizer/0.1.8?timeout=300') // timeout is optional
+    .pipe(input)
+    .then(function (output) {
+      console.log(output);
+      outputText.innerText = output.result;
+    });
+})
+
+  // function summ() {
+  //   console.log("clicked")
+  //   var input = inp();
+  //   Algorithmia.client('sim6fYfoZ7t75cTwEvyAJG73WcK1')
+  //     .algo('nlp/Summarizer/0.1.8?timeout=300') // timeout is optional
+  //     .pipe(input)
+  //     .then(function (output) {
+  //       console.log(output);
+  //       outputText.innerText = output.result;
+  //     });
+  // }
+
+
+
+
+
 
   document.getElementById('download').addEventListener('click',()=>{
       const invoice = this.document.getElementById('invoice').innerText;
