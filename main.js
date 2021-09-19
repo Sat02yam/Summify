@@ -50,6 +50,11 @@ document.getElementById('sumBtn').addEventListener('click',()=>{
       
       html2pdf().from(invoice).set(opt).save();
   })
+
+
+  document.getElementById('refresh').addEventListener("click",()=>{
+    location. reload();
+  })
 //   document.getElementById('download2').addEventListener('click',()=>{
 //       const invoice2 = this.document.getElementById('invoice2');
 //       console.log(invoice2);
